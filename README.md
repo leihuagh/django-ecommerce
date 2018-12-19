@@ -33,3 +33,9 @@ DATABASES = {
     }
 }
 ```
+
+## Other Resources
+
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery Download](https://jquery.com/download/)
+- [popper.js Download](https://github.com/FezVrasta/popper.js#installation)
