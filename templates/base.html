@@ -11,11 +11,7 @@
       {% block head_title %}      
       {% endblock head_title %}
     </title>
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap/4.1.3/bootstrap.min.css' %}">
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/jumbotron.css' %}" rel="stylesheet">
-
+    {% include 'css.html' %}
   </head>
 
   <body>
@@ -29,16 +25,9 @@
 
     </main>
 
-    <footer class="container">
-      <p>&copy; Company 2017-2018</p>
-    </footer>
+    {% include 'footer.html' %}
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% static 'js/jquery/jquery-3.3.1.min.js' %}" ></script>
-    <script src="{% static 'js/common/popper.min.js' %}" ></script>
-    <script src="{% static 'js/bootstrap/4.1.3/bootstrap.min.js' %}" ></script>
+    {% include 'js.html' %}
   </body>
 </html>
 
