@@ -13,3 +13,23 @@
   - django (2.1.3): pip install django==2.1.3
   - mysqlclient [download from](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
   - pillow (for ImageField)
+
+## MySQL Connection
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '<database name>',
+        'USER': '<username>',
+        'PASSWORD': '<password>',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': 'SET innodb_strict_mode=1',
+            'sql_mode': 'STRICT_TRANS_TABLES',
+            'charset': 'utf8mb4'
+        }
+    }
+}
+```
