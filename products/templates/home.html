@@ -3,6 +3,12 @@
 {{ title }}    
 {% endblock head_title %}
 
+{% block styles %}
+  {% for style in styles %}
+    <link rel='stylesheet' href='{{ style }}' />
+  {% endfor %}
+{% endblock styles %}
+
 {% block content %}
     <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
@@ -37,3 +43,9 @@
 
       </div> <!-- /container -->
 {% endblock content %}
+
+{% block jquery %}
+  {% for js in jss %}
+    <script src="{{ js }}" ></script>
+  {% endfor %}
+{% endblock jquery%}

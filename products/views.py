@@ -8,6 +8,12 @@ def home(request):
         user = request.user.first_name
     context = {
         "user": user,
-        "title": 'Welcome to Ecommerce'
+        "title": 'Welcome to Ecommerce',
+        "styles": [
+            "/static/css/ecommerce.css"
+        ],
+        "jss": [
+            "/static/js/ecommerce.js"
+        ]
     }
     return render(request, template, context)

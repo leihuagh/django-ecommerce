@@ -12,6 +12,7 @@
       {% endblock head_title %}
     </title>
     {% include 'css.html' %}
+    {% block styles %}{% endblock styles %}
   </head>
 
   <body>
@@ -28,6 +29,9 @@
     {% include 'footer.html' %}
 
     {% include 'js.html' %}
+
+    {% block jquery %}
+    {% endblock jquery %}
   </body>
 </html>
 
