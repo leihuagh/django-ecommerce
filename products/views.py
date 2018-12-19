@@ -7,6 +7,7 @@ def home(request):
     if request.user.is_authenticated:
         user = request.user.first_name
     context = {
-        "user": user
+        "user": user,
+        "title": 'Welcome to Ecommerce'
     }
     return render(request, template, context)
