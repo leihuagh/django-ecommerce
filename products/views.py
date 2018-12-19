@@ -2,4 +2,6 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "home.html", {})
+    template = "base.html"
+    context = locals()
+    return render(request, template, context)
