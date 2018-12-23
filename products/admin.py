@@ -3,7 +3,9 @@ from .models import Product
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['__str__', 'price', 'slug', 'created', 'updated']
+    search_fields = ['title', 'description', 'price']
+    list_display = ['__str__', 'description',
+                    'price', 'slug', 'created', 'updated']
 
     class Meta:
         model = Product
