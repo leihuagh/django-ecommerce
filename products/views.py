@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product
 
 
 def home(request):
@@ -15,5 +16,14 @@ def home(request):
         "jss": [
             "/static/js/ecommerce.js"
         ]
+    }
+    return render(request, template, context)
+
+
+def all(request):
+    products = Product.objects.all()
+    template = 'all.html'
+    context = {
+        "products": products
     }
     return render(request, template, context)
