@@ -17,3 +17,15 @@ class Product(models.Model):
 
     def get_price(self):
         return self.price
+
+
+class ProductIamge(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='products/images/')
+    featured = models.BooleanField(default=False)
+    thumbnail = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.product.title
